@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#1a0b12" />
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="gifttable-app.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <h1>Wishlist</h1>
+      </header>
+
+      <section id="tab-add" class="tab-panel active" aria-labelledby="btn-add">
+        <form id="wish-form" class="card">
+          <h2>Add Wishlist Item</h2>
+
+          <label for="person-select">Who is this for?</label>
+          <select id="person-select" required>
+            <option value="Hawa">Hawa</option>
+            <option value="Reia">Reia</option>
+          </select>
+
+          <label for="price-select">Price category</label>
+          <select id="price-select" required>
+            <option value="<$10">&lt;$10</option>
+            <option value="<$40">&lt;$40</option>
+            <option value="$40+">$40+</option>
+          </select>
+
+          <label for="item-input">Wishlist item</label>
+          <input
+            id="item-input"
+            type="text"
+            maxlength="120"
+            placeholder="Example: Silver necklace"
+            required
+          />
+
+          <label for="link-input">Product Link (optional)</label>
+          <input
+            id="link-input"
+            type="url"
+            maxlength="500"
+            placeholder="https://example.com/item"
+          />
+
+          <button id="submit-item" type="submit">Save Item</button>
+          <button id="refresh-items-btn" type="button" class="secondary-btn">Refresh Cloud Items</button>
+          <p id="save-note" class="note">Cloud sync is not configured yet.</p>
+        </form>
+      </section>
+
+      <section id="tab-view" class="tab-panel" aria-labelledby="btn-view">
+        <div class="card">
+          <h2>Wishlist Items</h2>
+          <div id="list-root" class="lists"></div>
+        </div>
+
+        <details class="card advanced-options">
+          <summary>Advanced options</summary>
+          <form id="config-form" class="embedded-form">
+            <h2>Cloud Setup</h2>
+
+            <label for="api-url-input">Supabase project URL</label>
+            <input
+              id="api-url-input"
+              type="url"
+              placeholder="https://YOUR-PROJECT.supabase.co"
+              required
+            />
+
+            <label for="api-key-input">Supabase anon key</label>
+            <input id="api-key-input" type="text" placeholder="eyJ..." required />
+
+            <label for="group-id-input">Shared group ID</label>
+            <input id="group-id-input" type="number" min="1" step="1" placeholder="1" required />
+
+            <button id="save-config-btn" type="submit">Save Cloud Settings</button>
+            <button id="clear-config-btn" type="button" class="secondary-btn">Clear Settings</button>
+            <p id="config-note" class="note">Enter these once per phone to sync the same list.</p>
+          </form>
+        </details>
+      </section>
+    </main>
+
+    <nav class="bottom-tabs" aria-label="Main navigation">
+      <button id="btn-add" class="tab-btn active" type="button" data-tab="add">Add Item</button>
+      <button id="btn-view" class="tab-btn" type="button" data-tab="view">View Items</button>
+    </nav>
+
+    <script src="gifttable-app.js"></script>
+  </body>
+</html>
