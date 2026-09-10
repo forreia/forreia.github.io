@@ -20,6 +20,26 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+.back-link {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 20;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    background: rgba(196, 69, 105, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 8px 14px;
+    backdrop-filter: blur(8px);
+}
+
+.back-link:hover {
+    background: rgba(196, 69, 105, 0.7);
+}
+
 .page {
     display: none;
     min-height: 100vh;

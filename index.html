@@ -3,59 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day Reia ❤️</title>
+    <title>Notes for Reia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hub/hub.css">
 </head>
 <body>
-    <!-- First Page - Greeting -->
-    <div id="greeting-page" class="page active">
-        <div class="container">
-            <div class="hearts-background">
-                <div class="heart">❤️</div>
-                <div class="heart">💕</div>
-                <div class="heart">💖</div>
-                <div class="heart">💗</div>
-                <div class="heart">❤️</div>
-                <div class="heart">💕</div>
-                <div class="heart">💖</div>
-                <div class="heart">💗</div>
-            </div>
-            <h1 class="greeting-title">Happy Valentine's Day Reia...</h1>
-            <div class="hearts-display">
-                <span class="heart-icon">❤️</span>
-                <span class="heart-icon">💕</span>
-            </div>
-            <button id="continue-btn" class="continue-button">Continue</button>
-        </div>
-    </div>
-
-    <!-- Second Page - Message -->
-    <div id="message-page" class="page">
-        <div class="message-container">
-            <div class="hearts-background-message">
-                <div class="floating-heart">❤️</div>
-                <div class="floating-heart">💕</div>
-                <div class="floating-heart">💖</div>
-                <div class="floating-heart">💗</div>
-                <div class="floating-heart">❤️</div>
-                <div class="floating-heart">💕</div>
-                <div class="floating-heart">💖</div>
-                <div class="floating-heart">💗</div>
-                <div class="floating-heart">❤️</div>
-                <div class="floating-heart">💕</div>
-            </div>
-            <div class="message-content">
-                <h2 class="message-title">Dear Reia,</h2>
-                <p class="message-text">
-                    When I first saw you in gov, I instantly fell in love with your personality, passion, style and your overwhelming beauty. As I admired you more and more, I was struck with heartbreaking news to find out you had someone. It tore me apart and sent me spirling into bad decisions. When I dm'd you, I thought I had no chance, but I had little to lose, I knew you were the person I wanted and even if you ghosted me my shot would have been worth it. But you didn't, even though we took a break from chatting, you didn't escape my mind. Everytime I saw you walking without me I regretted not finding you sooner, having you by my side sooner. When we started talking again, it was as if we had been best friends our whole lives. We talked so easily, we snapped quickly, and we slowly fell for eachother despite your efforts not to go into a relationship. Against all odds, I finally had who I've called from the beginning of the year, the person I liked so much, actually liked me back. I flexed to every person how I called you since the day I met you and I gained so much hope for a future with you. Happy Valentine's Day baby... XOXO Your Man
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <div class="hub-glow" aria-hidden="true"></div>
+    <main class="hub">
+        <header class="hub-header">
+            <p class="hub-kicker">for Reia</p>
+            <h1>Notes</h1>
+        </header>
+        <ol id="notes-list" class="notes-list"></ol>
+    </main>
+    <script src="hub/hub.js"></script>
 </body>
 </html>
